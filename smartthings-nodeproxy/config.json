@@ -1,0 +1,58 @@
+{
+  "port": 8090,
+  "authCode": "secret-key",
+  "knekt": {
+    "ports": [
+    {
+		"name": "/dev/ttyUSB0",
+		"baudRate": 9600,
+		"dataBits": 7,
+		"parity": "even"
+	},
+	{
+		"name": "/dev/ttyAMA0",
+		"baudRate": 9600,
+		"dataBits": 7,
+		"parity": "even"
+	}
+	],
+    "sources": [
+      "Simon's Player",
+      "Sonia's Player",
+      "Bella's Player",
+      "Olivia's Player",
+      "Simon's Radio",
+      "Sonia's Radio",
+      "Chromecast",
+      "Lounge"
+    ],
+    "controller_config": {
+      "type": "discover",
+      "controllers": [
+        {
+          "id": 0,
+          "zones": [
+            {
+              "zone": 0,
+              "name": "Bathroom",
+              "startup_volume": 20,
+              "startup_knekt_source": 1,
+              "startup_local_source": 1
+            },
+            {
+              "zone": 1,
+              "name": "Kitchen",
+              "startup_volume": 30,
+              "startup_knekt_source": 2,
+              "startup_local_source": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "notify": {
+    "address": "192.168.0.40",
+    "port": "39500"
+  }
+}
